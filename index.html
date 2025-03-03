@@ -4,11 +4,11 @@
     <title>Abraham F. Garcia - Resume</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
         }
         .container {
@@ -16,39 +16,50 @@
             margin: 20px auto;
             padding: 20px;
             background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
         header {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #333;
         }
         header h1 {
             margin: 0;
             font-size: 2.5em;
+            color: #333;
         }
         header p {
             margin: 5px 0;
             font-size: 1.1em;
+            color: #555;
         }
         section {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         h2 {
             background-color: #333;
             color: #fff;
             padding: 10px;
-            margin: 0 -20px 10px -20px;
+            margin: 0 -20px 20px -20px;
             font-size: 1.5em;
+            border-radius: 5px 5px 0 0;
         }
         ul {
             list-style-type: none;
             padding: 0;
         }
         ul li {
-            background: #eee;
-            margin: 5px 0;
-            padding: 10px;
+            background: #f4f4f4;
+            margin: 10px 0;
+            padding: 15px;
             border-left: 5px solid #333;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        ul li:hover {
+            background: #e0e0e0;
         }
         .contact-info {
             display: flex;
@@ -58,6 +69,7 @@
         }
         .contact-info p {
             margin: 5px 0;
+            color: #555;
         }
         .skills, .references {
             display: flex;
@@ -66,14 +78,27 @@
         }
         .skills div, .references div {
             width: 48%;
-            background: #eee;
-            padding: 10px;
+            background: #f4f4f4;
+            padding: 15px;
             margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .skills div:hover, .references div:hover {
+            background: #e0e0e0;
         }
         @media (max-width: 600px) {
             .skills div, .references div {
                 width: 100%;
             }
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #555;
         }
     </style>
 </head>
@@ -81,7 +106,7 @@
     <div class="container">
         <header>
             <h1>ABRAHAM F. GARCIA</h1>
-            <p>abe07garcia@gmail.com | (662) 509-1369 (cell)</p>
+            <p><a href="mailto:abc07garcia@gmail.com">abe07garcia@gmail.com</a> | <a href="tel:6625091369">(662) 509-1369</a> (cell)</p>
             <p>56 Katelyn Path, Pontotoc, MS 38863</p>
         </header>
 
@@ -112,16 +137,16 @@
                     October 2017 - Present (as needed)<br>
                     Laborer/General Handyman<br>
                     -Execute a variety of general construction and maintenance tasks, including material handling, site preparation, and cleanup.<br> 
-                    -Renovate, demolish, and construct residential structures such as patios, driveways, roofs, and houses.<br> 
+                    -Renovate, demolish, and construct residential structures such as patios, driveways, roofs, and houses.<br>
                     -Support electrical wiring projects and install tile and laminate flooring with precision and attention to detail.</li>
                 <li><strong>Cadence Bank, Tupelo, MS</strong><br>
                     May - August 2024<br>
                     Centralized Boarding Intern<br>
                     -Collected and reviewed information from loan officers to accurately complete loan documentation.<br>
-                    -Ensured the accuracy and precision of loan details, adhering to strict quality standards.<br> 
+                    -Ensured the accuracy and precision of loan details, adhering to strict quality standards.<br>
                     -Collaborated with team members to efficiently manage and complete tasks.<br>
                     -Participated in weekly meetings with interns and department leaders to gain insights into company operations.</li>
-                <li><strong>Affordable Furniture, Houlka, MS</strong><br>
+                <li><strong>Affordable Furniture, Houka, MS</strong><br>
                     May - August 2023<br>
                     Roller<br>
                     -Transported furniture from the factory floor to the warehouse and organized inventory systematically.<br>
@@ -154,18 +179,18 @@
             <div class="references">
                 <div>
                     <strong>Bradley Howard</strong><br>
-                    (662) 862-8140<br>
-                    bllhoward@iccms.edu<br>
+                    <a href="tel:6628628140">(662) 862-8140</a><br>
+                    <a href="mailto:bllhoward@iccms.edu">bllhoward@iccms.edu</a><br>
                     Computer Science Instructor
                 </div>
                 <div>
                     <strong>Randy Mooneyham</strong><br>
-                    (662) 436-1349<br>
+                    <a href="tel:6624361349">(662) 436-1349</a><br>
                     Factory Floor Manager
                 </div>
                 <div>
                     <strong>Ben Bunch</strong><br>
-                    (662) 322-7250<br>
+                    <a href="tel:6623227250">(662) 322-7250</a><br>
                     Vice President | Loan Operations Specialist
                 </div>
             </div>
