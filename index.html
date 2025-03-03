@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abraham F. Garcia - Resume</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -13,14 +13,18 @@
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 20px auto;
             padding: 20px;
             background: #fff;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
         }
         header {
+            grid-column: 1 / -1;
             text-align: center;
             margin-bottom: 30px;
             padding-bottom: 20px;
@@ -28,41 +32,59 @@
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
             color: #333;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Playfair Display', serif;
         }
         header p {
             margin: 5px 0;
             font-size: 1.1em;
             color: #555;
         }
-        section {
-            margin-bottom: 30px;
+        .sidebar {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: #fff;
-            padding: 10px;
-            margin: 0 -20px 20px -20px;
-            font-size: 1.5em;
-            border-radius: 5px 5px 0 0;
+        .sidebar h2 {
             font-family: 'Montserrat', sans-serif;
+            color: #6a11cb;
+            margin-bottom: 15px;
         }
-        ul {
+        .sidebar ul {
             list-style-type: none;
             padding: 0;
         }
-        ul li {
-            background: #f4f4f4;
+        .sidebar ul li {
             margin: 10px 0;
-            padding: 15px;
+            padding: 10px;
+            background: #fff;
             border-left: 5px solid #6a11cb;
             border-radius: 5px;
             transition: background 0.3s ease;
         }
-        ul li:hover {
+        .sidebar ul li:hover {
             background: #e0e0e0;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .main-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #6a11cb;
+            margin-bottom: 15px;
+        }
+        .card {
+            background: #f4f4f4;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
         }
         .contact-info {
             display: flex;
@@ -81,16 +103,20 @@
         }
         .skills div, .references div {
             width: 48%;
-            background: #f4f4f4;
+            background: #fff;
             padding: 15px;
             margin-bottom: 10px;
             border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: background 0.3s ease;
         }
         .skills div:hover, .references div:hover {
             background: #e0e0e0;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
             .skills div, .references div {
                 width: 100%;
             }
@@ -113,94 +139,89 @@
     <div class="container">
         <header>
             <h1>ABRAHAM F. GARCIA</h1>
-            <p><span class="icon">✉️</span><a href="mailto:abc07garcia@gmail.com">abe07garcia@gmail.com</a> | <span class="icon">📞</span><a href="tel:6625091369">(662) 509-1369</a> (cell)</p>
+            <p><span class="icon">✉️</span><a href="mailto:abe07garcia@gmail.com">abe07garcia@gmail.com</a> | <span class="icon">📞</span><a href="tel:6625091369">(662) 509-1369</a> (cell)</p>
             <p><span class="icon">🏠</span>56 Katelyn Path, Pontotoc, MS 38863</p>
         </header>
 
-        <section>
-            <h2>Profile</h2>
-            <p>A task-oriented Electrical Engineering student looking to apply knowledge to real-world applications through work experience. Knowledgeable in both computer and electrical engineering concepts. My passion lies in learning and adapting to the world around me.</p>
-        </section>
+        <div class="sidebar">
+            <section>
+                <h2>Profile</h2>
+                <p>A task-oriented Electrical Engineering student looking to apply knowledge to real-world applications through work experience. Knowledgeable in both computer and electrical engineering concepts. My passion lies in learning and adapting to the world around me.</p>
+            </section>
 
-        <section>
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Mississippi State University, Bagley School of Engineering, Starkville, MS</strong><br>
+            <section>
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>Microsoft Office Excel, PowerPoint, Word</li>
+                    <li>Circuitry, Soldering, and Microprocessor Systems</li>
+                    <li>C++, Arduino, MATLAB, Verilog, and Quartus Prime</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>References</h2>
+                <ul>
+                    <li><strong>Bradley Howard</strong><br>
+                        <span class="icon">📞</span><a href="tel:6628628140">(662) 862-8140</a><br>
+                        <span class="icon">✉️</span><a href="mailto:bllhoward@iccms.edu">bllhoward@iccms.edu</a><br>
+                        Computer Science Instructor</li>
+                    <li><strong>Randy Mooneyham</strong><br>
+                        <span class="icon">📞</span><a href="tel:6624361349">(662) 436-1349</a><br>
+                        Factory Floor Manager</li>
+                    <li><strong>Ben Bunch</strong><br>
+                        <span class="icon">📞</span><a href="tel:6623227250">(662) 322-7250</a><br>
+                        Vice President | Loan Operations Specialist</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="main-content">
+            <section>
+                <h2>Education</h2>
+                <div class="card">
+                    <strong>Mississippi State University, Bagley School of Engineering, Starkville, MS</strong><br>
                     Expected Graduation: December 2025<br>
                     Intended Major: Electrical Engineering<br>
                     Intended Minor: Computer Science<br>
-                    GPA: 3.92/4.0  -  Cumulative GPA: 3.88/4.0</li>
-                <li><strong>Itawamba Community College, Fulton, MS</strong><br>
+                    GPA: 3.92/4.0 - Cumulative GPA: 3.88/4.0
+                </div>
+                <div class="card">
+                    <strong>Itawamba Community College, Fulton, MS</strong><br>
                     May 2023<br>
                     Graduated magna cum laude with active membership in Phi Theta Kappa<br>
-                    GPA: 3.87/4.0</li>
-            </ul>
-        </section>
+                    GPA: 3.87/4.0
+                </div>
+            </section>
 
-        <section>
-            <h2>Work Experience</h2>
-            <ul>
-                <li><strong>Jesus Holguin, Pontotoc, MS</strong><br>
+            <section>
+                <h2>Work Experience</h2>
+                <div class="card">
+                    <strong>Jesus Holguin, Pontotoc, MS</strong><br>
                     October 2017 - Present as needed<br>
                     Laborer General Handyman<br>
-                    -Execute a variety of general construction and maintenance tasks, including material handling, site preparation, and cleanup.<br>
-                    -Renovate, demolish, and construct residential structures such as patios, driveways, roofs, and houses.<br>
-                    -Support electrical wiring projects and install tile and laminate flooring with precision and attention to detail.</li>
-                <li><strong>Cadence Bank, Tupelo, MS</strong><br>
+                    • Execute a variety of general construction and maintenance tasks, including material handling, site preparation, and cleanup.<br>
+                    • Renovate, demolish, and construct residential structures such as patios, driveways, roofs, and houses.<br>
+                    • Support electrical wiring projects and install tile and laminate flooring with precision and attention to detail.
+                </div>
+                <div class="card">
+                    <strong>Cadence Bank, Tupelo, MS</strong><br>
                     May - August 2024<br>
                     Centralized Boarding Intern<br>
-                    -Collected and reviewed information from loan officers to accurately complete loan documentation.<br>
-                    -Ensured the accuracy and precision of loan details, adhering to strict quality standards.<br>
-                    -Collaborated with team members to efficiently manage and complete tasks.
-                    -Participated in weekly meetings with interns and department leaders to gain insights into company operations.</li>
-                <li><strong>Affordable Furniture, Houka, MS</strong><br>
+                    • Collected and reviewed information from loan officers to accurately complete loan documentation.<br>
+                    • Ensured the accuracy and precision of loan details, adhering to strict quality standards.<br>
+                    • Collaborated with team members to efficiently manage and complete tasks.<br>
+                    • Participated in weekly meetings with interns and department leaders to gain insights into company operations.
+                </div>
+                <div class="card">
+                    <strong>Affordable Furniture, Houka, MS</strong><br>
                     May - August 2023<br>
                     Roller<br>
-                    -Transported furniture from the factory floor to the warehouse and organized inventory systematically.<br>
-                    -Supplied assembly workers with materials to ensure efficient production workflows.<br>
-                    -Assisted new hires in adapting to the work environment by providing guidance and support.<br>
-                    -Acted as a translator to facilitate communication between workers and supervisors.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Technical Skills</h2>
-            <div class="skills">
-                <div>
-                    <strong>Proficient in:</strong><br>
-                    Microsoft Office Excel, PowerPoint, Word
+                    • Transported furniture from the factory floor to the warehouse and organized inventory systematically.<br>
+                    • Supplied assembly workers with materials to ensure efficient production workflows.<br>
+                    • Assisted new hires in adapting to the work environment by providing guidance and support.<br>
+                    • Acted as a translator to facilitate communication between workers and supervisors.
                 </div>
-                <div>
-                    <strong>Intermediate knowledge of:</strong><br>
-                    Circuitry, Soldering, and Microprocessor Systems
-                </div>
-                <div>
-                    <strong>Programming experience in:</strong><br>
-                    C++, Arduino, MATLAB, Verilog, and Quartus Prime
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>References</h2>
-            <div class="references">
-                <div>
-                    <strong>Bradley Howard</strong><br>
-                    <span class="icon">📞</span><a href="tel:6628628140">(662) 862-8140</a><br>
-                    <span class="icon">✉️</span><a href="mailto:bllhoward@iccms.edu">bllhoward@iccms.edu</a><br>
-                    Computer Science Instructor
-                </div>
-                <div>
-                    <strong>Randy Mooneyham</strong><br>
-                    <span class="icon">📞</span><a href="tel:6624361349">(662) 436-1349</a><br>
-                    Factory Floor Manager
-                </div>
-                <div>
-                    <strong>Ben Bunch</strong><br>
-                    <span class="icon">📞</span><a href="tel:6623227250">(662) 322-7250</a><br>
-                    Vice President | Loan Operations Specialist
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
 </body>
